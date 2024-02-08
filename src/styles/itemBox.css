@@ -8,5 +8,16 @@
 }
 
 .item-box-row {
-    background-color: yellow;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-right: 20px;
+    border: 1px solid #ffeba7;
+    max-width: 95%;
+}
+
+.item-box-row:hover {
+    background-color: #5e6681;
+    color: #ffeba7;
+    box-shadow: 0 4px 4px 0 rgb(16 39 112 / 20%);
+    transition: all .1s ease-in-out;
 }
