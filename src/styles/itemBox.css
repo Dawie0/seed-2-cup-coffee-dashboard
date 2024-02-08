@@ -1,0 +1,12 @@
+.wrap-content {
+    /* max-width: 200px;  */
+    overflow-wrap: break-word;
+}
+
+.b {
+    border: 1px solid red;
+}
+
+.item-box-row {
+    background-color: yellow;
+}
