@@ -29,7 +29,6 @@ const OrderContextProvider = ({ children }) => {
             console.error('error getting data: ', error)
         }
         finally {
-            console.log('context: ', refresh)
             setRefresh(false)
         }   
     } 
@@ -46,7 +45,7 @@ const OrderContextProvider = ({ children }) => {
         loggedIn,
         logIn
     }
-    
+
     return (
         <OrderContext.Provider value={values}>
             {children}

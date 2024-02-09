@@ -34,6 +34,9 @@ const Login = () => {
                     Sign in
                 </button>
             </form>
+            <button type='button' onClick={() => navigate('/add-account')} >
+                Register
+            </button>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 /* eslint react/prop-types: 0 */
+import '../styles/orderInfo.css'
 
 const OrderInfo = ({ handleClick, selectedOrder }) => {
 
@@ -17,18 +18,22 @@ const OrderInfo = ({ handleClick, selectedOrder }) => {
     }
 
     return (
-        <div >
-            <button type="button" onClick={openOrderInfo}>
-                back
+        <div className="order-info-container">
+            <button type="button" onClick={openOrderInfo} className="back-button btn m-3">
+                Back
             </button>
-            <div className="col">
-                <p>{selectedOrder.customerDetails.name}</p>
-                <p>{selectedOrder.customerDetails.email}</p>
-                <p>{selectedOrder.cartItems ? populateProducts(selectedOrder.cartItems) : 'error'}</p>
-                <p>{`${selectedOrder.customerDetails.address.line1} ${selectedOrder.customerDetails.address.line1 ? selectedOrder.customerDetails.address.line1 : ''},
-                    ${selectedOrder.customerDetails.address.city}, ${selectedOrder.customerDetails.address.state}, ${selectedOrder.customerDetails.address.postal_code}`}</p>
-                <p>{selectedOrder.isPending ? 'Is Pending' : 'Finalized'}</p>
-                <p>{selectedOrder.isPending ? <button>Finalize</button> : 'Checked'}</p>
+            <div className="order-details">
+                <p>Name: {selectedOrder.customerDetails.name}</p>
+                <p>Email: {selectedOrder.customerDetails.email}</p>
+                <div className="product-list">
+                    <p>Products:</p>
+                    <span>{selectedOrder.cartItems ? populateProducts(selectedOrder.cartItems) : 'Error'}</span>
+                </div>
+                <p>Address: {`${selectedOrder.customerDetails.address.line1} ${selectedOrder.customerDetails.address.city}, ${selectedOrder.customerDetails.address.state}, ${selectedOrder.customerDetails.address.postal_code}`}</p>
+                <p>Status: {selectedOrder.isPending ? 'Pending' : 'Finalized'}</p>
+                {selectedOrder.isPending && (
+                    <button className=" btn">Finalize</button>
+                )}
             </div>
         </div>
     )
