@@ -102,7 +102,7 @@ const Dashboard = () => {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid main-container">
             <div className='m-2'>
                 <button
                     type='button'
