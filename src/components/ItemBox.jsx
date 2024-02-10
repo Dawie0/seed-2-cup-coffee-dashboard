@@ -38,7 +38,7 @@ const ItemBox = ({ item, handleClick, selectOrder }) => {
                     ${item.customerDetails.address.city}, ${item.customerDetails.address.state}, ${item.customerDetails.address.postal_code}`}</p>
                 </div>
             </div>
-            <div className='col-xs-1 col-md-1 m-1'>
+            <div className='col-xs-1 col-md-1 m-1 d-none d-md-block'>
                 <div className="wrap-content"><p>{item.isPending ? 'Is Pending' : 'Finalized'}</p></div>
             </div>
             {/* <div className='col-xs-1 col-md-1'>
