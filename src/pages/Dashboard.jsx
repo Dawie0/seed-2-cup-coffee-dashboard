@@ -113,7 +113,7 @@ const Dashboard = () => {
                 </button>
                 <button
                     type='button'
-                    className='btn m-5'
+                    className='btn m-2'
                     onClick={generateList}  
                 >
                     Generate List
